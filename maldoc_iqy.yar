@@ -14,7 +14,7 @@ rule iqy_potential_malware_2
 {
 	meta:
 		author = "Gil Mansharov"
-		description = "Hunting potential iqy malware files - lots of potential FP (still can be bypassed)"
+		description = "Hunting potential iqy malware files - potential FPs (still can be bypassed)"
 		reference = "https://blog.barkly.com/iqy-file-attack-malware-flawedammyy"
 	strings:
 		$1 = "WEB" nocase
