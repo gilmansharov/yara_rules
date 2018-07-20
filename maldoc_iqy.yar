@@ -7,7 +7,7 @@ rule iqy_potential_malware_1
 	strings:
 		$pattern = /WEB\s?\n1\s?\nhttps?:\/\/([\w\.-]+)([\/\w \.-]*)/ nocase
 	condition:
-		$pattern
+		$pattern and not uint16(0) == 0x5a4d
 }
 
 rule iqy_potential_malware_2
@@ -20,5 +20,5 @@ rule iqy_potential_malware_2
 		$1 = "WEB" nocase
 		$2 = /\n1\s?\nhttps?:\/\/([\w\.-]+)([\/\w \.-]*)/ nocase
 	condition:
-		all of them
+		all of them and not uint16(0) == 0x5a4d
 }
