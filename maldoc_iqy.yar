@@ -2,7 +2,7 @@ rule iqy_potential_malware
 {
 	meta:
 		author = "Gil Mansharov"
-		description = "Hunting potential iqy malware files - easy to bypass"
+		description = "Hunting potential iqy malware files"
 		reference = "https://blog.barkly.com/iqy-file-attack-malware-flawedammyy"
 	strings:
 		$pattern = /WEB\s?\n1\s?\nhttps?:\/\/([\w\.-]+)([\/\w \.-]*)/ nocase
